@@ -1,0 +1,16 @@
+{
+    "required": true,
+    "minVersion": "0.8",
+    "package": "com.highest.eventLogger.mixin",
+    "compatibilityLevel": "JAVA_17",
+    "mixins": [],
+    "client": [
+        "playerDeathMixin"
+    ],
+    "server": [
+        "playerCommand"
+    ],
+    "injectors": {
+        "defaultRequire": 1
+    }
+}

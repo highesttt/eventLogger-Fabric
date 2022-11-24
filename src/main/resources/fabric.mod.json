@@ -1,0 +1,37 @@
+{
+    "schemaVersion": 1,
+    "id": "eventlogger",
+    "version": "${version}",
+
+    "name": "eventLogger",
+    "description": "Minecraft Fabric mod that logs events to a file",
+    "authors": [
+        "Highest"
+    ],
+    "contact": {
+        "homepage": "",
+        "sources": "https://github.com/highesttt/eventLogger-Fabric"
+    },
+
+    "license": "MIT",
+    "icon": "assets/lightLevelsMod/icon.png",
+
+    "environment": "*",
+    "entrypoints": {
+        "main": [
+            "com.highest.eventLogger.client.Main"
+        ]
+    },
+    "mixins": [
+        "eventLogger.mixins.json"
+    ],
+
+    "depends": {
+        "fabricloader": ">=0.14.10",
+        "fabric": "*",
+        "minecraft": "1.19.x"
+    },
+    "suggests": {
+        "another-mod": "*"
+    }
+}
