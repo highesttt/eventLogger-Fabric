@@ -24,7 +24,7 @@ public class playerDeathMixin {
         if (!RenderSystem.isOnRenderThread()) return;
 
         PlayerEntity player = MinecraftClient.getInstance().player;
-        
+
         String message = "[" + new Date().toString() + "] " + player.getName().getString() + " died.";
 
         updateFile.updateFile(packet.getEntityId(), message);
