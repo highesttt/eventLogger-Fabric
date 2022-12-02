@@ -8,6 +8,5 @@ public class Main implements ModInitializer {
 
     @Override
     public void onInitialize() {
-        System.out.println("eventLogger v1.0 by Highest loaded.");
     }
 }

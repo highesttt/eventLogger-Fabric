@@ -18,8 +18,8 @@ public class playerHurtEvent implements AttackEntityCallback {
     @Override
     public ActionResult interact(PlayerEntity player, World world, Hand hand, Entity entity, @Nullable EntityHitResult hitResult) {
         if (!world.isClient() && !player.isSpectator()) {
-            String message = "[" + new Date().toString() + "] " + player.getName().getString() + " hurt " + entity.getName().getString() + ".";
-            updateFile.updateFile(player.getId(), message);
+            String message = "[" + new Date().toString() + "] " + player.getName().getString() + " has damaged a " + entity.getName().getString() + ".";
+            updateFile.update(player.getId(), message, "damage");
         }
 
         return ActionResult.PASS;

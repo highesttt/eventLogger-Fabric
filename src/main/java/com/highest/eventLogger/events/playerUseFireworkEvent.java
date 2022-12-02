@@ -24,7 +24,7 @@ public class playerUseFireworkEvent implements UseItemCallback {
         if (item.getName().getString().contains("Rocket")) {
             if (player.isFallFlying() && player.getInventory().getArmorStack(2).getName().getString().contains("Elytra")) {
                 String message = "[" + new Date().toString() + "] " + player.getName().getString() + " used a rocket while flying.";
-                updateFile.updateFile(player.getId(), message);
+                updateFile.update(player.getId(), message, "rockets");
             }
         }
         return TypedActionResult.pass(player.getStackInHand(hand));

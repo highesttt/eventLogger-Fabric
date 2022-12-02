@@ -27,6 +27,6 @@ public class playerDeathMixin {
 
         String message = "[" + new Date().toString() + "] " + player.getName().getString() + " died.";
 
-        updateFile.updateFile(packet.getEntityId(), message);
+        updateFile.update(packet.getEntityId(), message, "deaths");
     }
 }
