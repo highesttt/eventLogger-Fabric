@@ -1,4 +1,9 @@
 {
     "java.configuration.updateBuildConfiguration": "interactive",
-    "java.compile.nullAnalysis.mode": "automatic"
+    "java.compile.nullAnalysis.mode": "automatic",
+    "java.dependency.packagePresentation": "flat",
+    "cSpell.words": [
+        "Minecraft"
+    ],
+    "java.dependency.syncWithFolderExplorer": true
 }
