@@ -1,12 +1,11 @@
 package com.highest.eventLogger.mixin;
 
 import com.highest.eventLogger.fileop.updateFile;
-import com.mojang.blaze3d.systems.RenderSystem;
 
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.network.ClientPlayNetworkHandler;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.network.packet.s2c.play.DeathMessageS2CPacket;
+import net.minecraft.network.packet.s2c.play.GameJoinS2CPacket;
 
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
@@ -17,17 +16,16 @@ import java.io.IOException;
 import java.util.Date;
 
 @Mixin(ClientPlayNetworkHandler.class)
-public class playerDeathMixin {
+public class playerJoinMixin {
 
-    @Inject(method = "onDeathMessage", at = @At("HEAD"))
-    public void onClientDeath(DeathMessageS2CPacket packet, CallbackInfo ci) throws IOException {
-        if (!RenderSystem.isOnRenderThread()) return;
+    @Inject(method = "onGameJoin", at = @At("TAIL"))
+    public void onJoin(GameJoinS2CPacket packet, CallbackInfo ci) throws IOException {
 
         MinecraftClient client = MinecraftClient.getInstance();
         PlayerEntity player = client.player;
 
-        String message = "[" + new Date().toString() + "] " + player.getName().getString() + " died.";
+        String message = "[" + new Date().toString() + "] " + player.getName().getString() + " has connected.";
 
-        updateFile.update(packet.getEntityId(), message, "death");
+        updateFile.update(packet.playerEntityId(), message, "connect");
     }
 }

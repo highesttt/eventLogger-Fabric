@@ -21,7 +21,6 @@ public class playerHurtEvent implements AttackEntityCallback {
             String message = "[" + new Date().toString() + "] " + player.getName().getString() + " has damaged a " + entity.getName().getString() + ".";
             updateFile.update(player.getId(), message, "damage");
         }
-
         return ActionResult.PASS;
     }
 }
