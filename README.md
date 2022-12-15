@@ -15,7 +15,7 @@ If you have any suggestions or bug reports, feel free to use the [issues](https:
   - Player taking damage - damaged.txt
   - Player jumping - jump.txt
   - Player joining world/server - connect.txt
-  - Player joining world/server - disconnect.txt
+  - Player leaving world/server - disconnect.txt
   
 ## Screenshots:
 <img src="https://user-images.githubusercontent.com/91629626/205417475-60525a09-2df3-457f-920d-c6af2ee5d9ec.png" width="60%" />
