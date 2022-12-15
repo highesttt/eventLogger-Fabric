@@ -27,4 +27,4 @@ If you have any suggestions or bug reports, feel free to use the [issues](https:
 
 ### You can check our latest release [here](https://github.com/highesttt/eventLogger-Fabric/releases/latest).
 
-### For the forge version, see [eventLogger-Fabric](https://github.com/highesttt/eventLogger-Forge).
+### For the forge version, see [eventLogger-Forge](https://github.com/highesttt/eventLogger-Forge).
